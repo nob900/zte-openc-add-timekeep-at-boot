@@ -1,0 +1,26 @@
+diff -Naur a/boot/ramdisk/init.rc b/boot/ramdisk/init.rc
+--- a/boot/ramdisk/init.rc	1969-12-31 20:00:00.000000000 -0400
++++ b/boot/ramdisk/init.rc	2015-12-31 11:30:58.984233220 -0400
+@@ -470,6 +470,11 @@
+     socket vold stream 0660 root mount
+     ioprio be 2
+ 
++# Make sure we have a proper time and set being set
++service timekeep /system/bin/timekeep restore
++    class core
++    oneshot
++
+ service netd /system/bin/netd
+     class main
+     socket netd stream 0660 root system
+diff -Naur a/boot/ramdisk/init.target.rc b/boot/ramdisk/init.target.rc
+--- a/boot/ramdisk/init.target.rc	1969-12-31 20:00:00.000000000 -0400
++++ b/boot/ramdisk/init.target.rc	2015-12-31 11:35:59.084242664 -0400
+@@ -102,6 +102,7 @@
+    class late_start
+    user root
+    group root
++   disabled
+ 
+ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+    user root
