@@ -3,7 +3,8 @@ Scripts permettant d'ajouter timekeep et de désactiver time_daemon (service Qua
 *Testés sur Debian Wheezy (7.X)*  
 
 Liste des scripts :
-- update-bootimage-and-apply-it.sh  
+- 1-update-bootimage.sh  
+- 2-apply-bootimage.sh  
 
 Prérequis:
 - ZTE Open C déjà rooté.
@@ -14,9 +15,9 @@ Prérequis:
 
 **Procédure**  
 1. Copier le boot.img du pack root ZTE dans le dossier du script.  
-2. Donner les droits d'exécution au script update-bootimage-and-apply-it.sh.  
-3. Connecter l'Open C à l'ordinateur exécutant le script.  
-4. Exécuter update-bootimage-and-apply-it.sh.  
+2. Donner les droits d'exécution aux scripts 1-update-bootimage.sh et 2-apply-bootimage.sh.  
+3. Exécuter 1-update-bootimage.sh.  
+4. Si l'exécution du script précédent a réussi, l'Open C à l'ordinateur, puis exécuter 2-apply-bootimage.sh.
 
 
 Les fichiers du service timekeep sont disponibles sur https://github.com/mozilla-b2g/timekeep
