@@ -1,6 +1,6 @@
 # zte-openc-add-timekeep-at-boot
 Scripts permettant d'ajouter timekeep et de désactiver time_daemon (service Qualcomm) au démarrage du ZTE Open C.  
-*Testés sur Debian Wheezy (7.X)*  
+*Testés sur Debian Wheezy (7.X) et sur Debian Jessie (8.x)*  
 
 Liste des scripts :
 - 1-update-bootimage.sh  
